@@ -1,0 +1,47 @@
+INPUTS:
+  SEQUENTIAL:
+    Source:
+      energy: normalize
+      pt: normalize
+      eta: normalize
+      phi: normalize_uniform
+      btag_score: none
+      is_lepton: none
+      charge: none
+  GLOBAL:
+    Conditions:
+      met: log_normalize
+      met_phi: normalize_uniform
+
+EVENT:
+  SVJ:
+    diagram:
+      Z:
+        q1: null
+        q2: null
+        SYMMETRY: [q1, q2]
+
+SEGMENTATIONS: {}
+
+REGRESSIONS: {}
+
+CLASSIFICATIONS:
+  EVENT:
+    - signal
+
+CLASSLABEL:
+  EVENT:
+    signal:
+      - [SVJ]
+
+RESONANCE_LABEL:
+  - ["null"]
+
+PARTICLE_PROPERTIES: []
+
+GENERATIONS:
+  Conditions: []
+  GlobalTargets: []
+  Events: []
+  Neutrinos:
+    rinv: normalize
